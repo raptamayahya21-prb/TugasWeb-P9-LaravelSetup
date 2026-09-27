@@ -7,77 +7,84 @@ use Tests\TestCase;
 class RequirementTest extends TestCase
 {
     /**
-     * Kriteria 4: Mengakses rute utama / & respon 200 OK
+     * Kriteria 4: Rute utama / mengembalikan respon 200 OK dan merender view home
      */
-    public function test_kriteria_4_rute_utama_mengembalikan_respon_200_dan_view_welcome(): void
+    public function test_kriteria_4_rute_utama_mengembalikan_respon_200(): void
     {
         $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertViewIs('home');
+        $response->assertViewHas('data');
+    }
+
+    /**
+     * Kriteria 4: Rute /about mengembalikan respon 200 OK dan merender view about
+     */
+    public function test_kriteria_4_rute_about_mengembalikan_respon_200(): void
+    {
+        $response = $this->get('/about');
+
+        $response->assertStatus(200);
+        $response->assertViewIs('about');
+        $response->assertViewHas('info');
+    }
+
+    /**
+     * Kriteria 4: Rute /contact mengembalikan respon 200 OK dan merender view contact
+     */
+    public function test_kriteria_4_rute_contact_mengembalikan_respon_200(): void
+    {
+        $response = $this->get('/contact');
+
+        $response->assertStatus(200);
+        $response->assertViewIs('contact');
+        $response->assertViewHas('kontak');
+    }
+
+    /**
+     * Kriteria 4: Rute /welcome mengembalikan respon 200 OK dan merender view welcome
+     */
+    public function test_kriteria_4_rute_welcome_mengembalikan_respon_200(): void
+    {
+        $response = $this->get('/welcome');
 
         $response->assertStatus(200);
         $response->assertViewIs('welcome');
     }
 
     /**
-     * Kriteria 4: Mengakses rute /about & respon 200 OK
+     * Kriteria 5: Rute / merender data array dinamis
      */
-    public function test_kriteria_4_rute_about_mengembalikan_respon_200_dan_view_about(): void
+    public function test_kriteria_5_rute_home_menampilkan_data_dinamis(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee('Core Inventory Management System');
+        $response->assertSee('Pemasok & Supplier');
+    }
+
+    /**
+     * Kriteria 5: Rute /about merender data array dinamis
+     */
+    public function test_kriteria_5_rute_about_menampilkan_data_dinamis(): void
     {
         $response = $this->get('/about');
 
         $response->assertStatus(200);
-        $response->assertViewIs('about');
+        $response->assertSee('Rapta Mayahya');
     }
 
     /**
-     * Kriteria 4: Mengakses rute /contact & respon 200 OK
+     * Kriteria 5: Rute /contact merender data array dinamis
      */
-    public function test_kriteria_4_rute_contact_mengembalikan_respon_200_dan_view_contact(): void
+    public function test_kriteria_5_rute_contact_menampilkan_data_dinamis(): void
     {
         $response = $this->get('/contact');
 
         $response->assertStatus(200);
-        $response->assertViewIs('contact');
-    }
-
-    /**
-     * Kriteria 5: Rute /about mengirimkan data dinamis integer random x
-     */
-    public function test_kriteria_5_rute_about_mengirimkan_data_dinamis_x(): void
-    {
-        $response = $this->get('/about');
-
-        $response->assertStatus(200);
-        $response->assertViewHas('x');
-
-        $x = $response->viewData('x');
-        $this->assertIsInt($x);
-        $this->assertGreaterThanOrEqual(1, $x);
-        $this->assertLessThanOrEqual(10, $x);
-
-        $response->assertSee("Paragraf lorem telah di tampilkan sebanyak {$x} kali.");
-        $response->assertSee('About Page');
-    }
-
-    /**
-     * Kriteria 5: Rute /contact mengirimkan data dinamis array
-     */
-    public function test_kriteria_5_rute_contact_mengirimkan_data_dinamis_array(): void
-    {
-        $response = $this->get('/contact');
-
-        $response->assertStatus(200);
-        $response->assertViewHas('data');
-
-        $data = $response->viewData('data');
-        $this->assertIsArray($data);
-        $this->assertArrayHasKey('name', $data);
-        $this->assertArrayHasKey('class', $data);
-        $this->assertArrayHasKey('nim', $data);
-
-        $response->assertSee('Contact Page');
-        $response->assertSee('name: ' . $data['name']);
-        $response->assertSee('class: ' . $data['class']);
-        $response->assertSee('nim: ' . $data['nim']);
+        $response->assertSee('raptamayahya@gmail.com');
     }
 
     /**
@@ -85,7 +92,7 @@ class RequirementTest extends TestCase
      */
     public function test_bonus_2_rute_parameter_hello_nama(): void
     {
-        $namaList = ['Rapta', 'Adidtya', 'LaravelSetup'];
+        $namaList = ['Rapta', 'Fahreza', 'Adidtya'];
 
         foreach ($namaList as $nama) {
             $response = $this->get("/hello/{$nama}");
@@ -93,7 +100,8 @@ class RequirementTest extends TestCase
             $response->assertStatus(200);
             $response->assertViewIs('hello');
             $response->assertViewHas('nama', $nama);
-            $response->assertSee("Hello {$nama}");
+            $response->assertSee("Selamat Datang, Operator");
+            $response->assertSee($nama);
         }
     }
 }
