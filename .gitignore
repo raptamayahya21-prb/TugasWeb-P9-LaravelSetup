@@ -1,0 +1,48 @@
+# Ignore PHP dependencies
+vendor/
+/node_modules
+
+# Ignore .env file (contains sensitive information)
+.env
+.env.*
+
+# Ignore composer cache and lock files
+composer.lock
+composer.phar
+
+# Ignore IDE / editor configuration
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore log files
+storage/logs/
+*.log
+
+# Ignore cache files
+storage/framework/cache/
+storage/framework/views/
+storage/framework/sessions/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore temporary files
+tmp/
+temp/
+
+# Ignore Git metadata
+.git/
+
+# Ignore OS files
+Thumbs.db
+
+# --- TAMBAHKAN INI DI BAGIAN BAWAH ---
+
+# 1. Abaikan file TASK.md (karena hanya panduan)
+TASK.md
+
+# 2. Abaikan folder screenshots (opsional, tapi aman)
+/public/screenshots/    # atau: screenshots/
