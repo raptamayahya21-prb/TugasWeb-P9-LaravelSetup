@@ -10,20 +10,6 @@ Repositori ini memuat implementasi dasar, konfigurasi lingkungan lokal, arsitekt
 
 ---
 
-## 👤 Informasi Mahasiswa
-
-| Keterangan | Detail |
-| :--- | :--- |
-| **Nama** | Rapta Mayahya |
-| **NIM** | 2026-P9-001 |
-| **Kelas** | PSIK 25B / Pemrograman Web |
-| **Program Studi** | S1 Ilmu Komputer |
-| **Mata Kuliah** | Pemrograman Web (Pertemuan 9) |
-| **Dosen Pengampu** | Adidtya Perdana, ST., M.KOM |
-| **Repositori** | `TugasWeb-P9-LaravelSetup` |
-| **Database Target** | `myproduct_db` |
-
----
 
 ## 📌 Ringkasan Proyek
 
