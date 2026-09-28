@@ -35,26 +35,12 @@ Aplikasi ini dirancang menggunakan arsitektur **Model-View-Controller (MVC)** de
 
 ## 📸 Tangkapan Layar Antarmuka
 
-### 1. Welcome Page & Dashboard
+### Welcome Page Laravel
+Tampilan default framework Laravel setelah instalasi berhasil dan server aktif dijalankan:
 
-| Welcome Page Laravel | Halaman Dashboard (Route `/`) |
-| :---: | :---: |
-| ![Welcome](docs/screenshots/ss-welcome.png) | ![Home](docs/screenshots/ss-home.png) |
-| Halaman default Laravel setelah instalasi | Dashboard utama dengan data array dinamis |
-
-### 2. Halaman Route Custom
-
-| Halaman About (Route `/about`) | Halaman Contact (Route `/contact`) |
-| :---: | :---: |
-| ![About](docs/screenshots/ss-about.png) | ![Contact](docs/screenshots/ss-contact.png) |
-| Informasi arsitektur sistem & developer | Pusat komunikasi & support operasional |
-
-### 3. Fitur Bonus — Route Parameter Dinamis
-
-| Halaman `/hello/{nama}` |
-| :---: |
-| ![Hello](docs/screenshots/ss-hello.png) |
-| Route parameter dinamis yang menampilkan nama operator dari URL |
+<p align="center">
+  <img src="docs/screenshots/ss-welcome.png" alt="Welcome Page Laravel" width="100%" />
+</p>
 
 ---
 
@@ -85,12 +71,8 @@ TugasWeb-P9-LaravelSetup/
 │   └── migrations/                     # Berkas skema tabel database (termasuk products)
 │
 ├── docs/                               # Dokumentasi dan tangkapan layar tugas
-│   └── screenshots/                    # Folder penyimpanan 5 screenshot utama
-│       ├── ss-welcome.png              # Screenshot Welcome Page bawaan Laravel
-│       ├── ss-home.png                 # Screenshot Halaman Dashboard (/)
-│       ├── ss-about.png                # Screenshot Halaman Sistem Info (/about)
-│       ├── ss-contact.png              # Screenshot Halaman Kontak Ops (/contact)
-│       └── ss-hello.png                # Screenshot Route Parameter (/hello/{nama})
+│   └── screenshots/                    # Folder penyimpanan tangkapan layar
+│       └── ss-welcome.png              # Screenshot Welcome Page bawaan Laravel
 │
 ├── public/                             # Document root web server (akses publik)
 │   ├── index.php                       # Entry point aplikasi Laravel
