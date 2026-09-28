@@ -54,7 +54,7 @@
     </main>
 
     <footer class="border-t border-slate-800 text-center py-4 text-xs font-mono text-slate-500">
-        Tugas Rutin 9 - Setup Framework Laravel &copy; 2026 Rapama Yahya Purba
+        Tugas Rutin 9 - Setup Framework Laravel &copy; 2026 Raptama Yahya Purba
     </footer>
 </body>
 
