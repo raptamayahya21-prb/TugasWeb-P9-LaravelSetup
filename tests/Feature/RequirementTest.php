@@ -73,7 +73,7 @@ class RequirementTest extends TestCase
         $response = $this->get('/about');
 
         $response->assertStatus(200);
-        $response->assertSee('Rapta Mayahya');
+        $response->assertSee('Raptama Yahya Purba');
     }
 
     /**
@@ -92,7 +92,7 @@ class RequirementTest extends TestCase
      */
     public function test_bonus_2_rute_parameter_hello_nama(): void
     {
-        $namaList = ['Rapta', 'Fahreza', 'Adidtya'];
+        $namaList = ['Raptama', 'Yahya', 'Adidtya'];
 
         foreach ($namaList as $nama) {
             $response = $this->get("/hello/{$nama}");

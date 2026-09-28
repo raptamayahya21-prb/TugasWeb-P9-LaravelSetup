@@ -175,6 +175,6 @@ Hasil: **10 passed (35 assertions)**.
 ---
 
 <p align="center">
-  <strong>© 2026 Rapta Mayahya — Tugas Rutin 9 — Setup Laravel</strong><br>
+  <strong>© 2026 Raptama Yahya Purba — Tugas Rutin 9 — Setup Laravel</strong><br>
   Mata Kuliah Pemrograman Web — Dosen: Adidtya Perdana, ST., M.KOM
 </p>

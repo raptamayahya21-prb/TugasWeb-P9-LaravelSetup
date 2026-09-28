@@ -11,9 +11,9 @@ class MainController extends Controller
     {
         $data = [
             'nama_sistem' => 'Core Inventory Management System',
-            'kode_node'   => 'NODE-MEDAN-01',
-            'status'      => 'Operational / System Nominal',
-            'modul'       => [
+            'kode_node' => 'NODE-MEDAN-01',
+            'status' => 'Operational / System Nominal',
+            'modul' => [
                 ['nama' => 'Pemasok & Supplier', 'stok' => '24 Rekanan Active'],
                 ['nama' => 'Kategori Perangkat Hardwares', 'stok' => '150+ SKU Item'],
                 ['nama' => 'Log Transaksi Masuk/Keluar', 'stok' => 'Real-time Audited']
@@ -27,9 +27,9 @@ class MainController extends Controller
     {
         $info = [
             'arsitektur' => 'Laravel Framework Core Engine (Laravel 11)',
-            'sistem_db'  => 'MySQL Database Server via PDO Driver (myproduct_db)',
-            'pengembang' => 'Rapta Mayahya (Dev-ID: 2026-P9-001)',
-            'visi'       => 'Penyediaan platform manajemen aset komputasi yang efisien, terstruktur, dan tersinkronisasi presisi.'
+            'sistem_db' => 'MySQL Database Server via PDO Driver (myproduct_db)',
+            'pengembang' => 'Raptama Yahya Purba (Dev-ID: 2026-P9-001)',
+            'visi' => 'Penyediaan platform manajemen aset komputasi yang efisien, terstruktur, dan tersinkronisasi presisi.'
         ];
 
         return view('about', compact('info'));
@@ -38,10 +38,10 @@ class MainController extends Controller
     public function contact()
     {
         $kontak = [
-            'divisi'   => 'Technical Support & System Operation Center',
-            'email'    => 'raptamayahya@gmail.com',
-            'telepon'  => '+62 812-3456-7890',
-            'lokasi'   => 'Medan, Sumatera Utara'
+            'divisi' => 'Technical Support & System Operation Center',
+            'email' => 'raptamayahya@gmail.com',
+            'telepon' => '+62 823-7412-3751',
+            'lokasi' => 'Medan, Sumatera Utara'
         ];
 
         return view('contact', compact('kontak'));
